@@ -61,7 +61,69 @@ if($temp>=50) {
 
 
 
+// Les boucles
+
+// Objectif : créer une liste à puces (10 puces)
+echo "<ul>";
+$i = 0;
+while ($i<10){
+    echo "<li>Puce $i</li>";
+    $i++;
+}
+echo "</ul>";
+
+// Tableau indexé
+$fruits = ["kiwi", "banane", "fraise", "ananas", "cerise"];
+echo "<ul>";
+foreach ($fruits as $fruit) {
+    echo "<li>$fruit</li>";
+}
+echo "</ul>";
+
+
+$people = [
+ "firstName" => "John",
+ "lastName" => "Doe",
+ "age" => 41
+];
+
+
+
 ?>
+
+
+
+
+
+<table>
+    <thead>
+    <tr>
+        <?php
+        foreach ($people as $key => $value) {
+            echo "<td>$key</td>";
+        }
+        ?>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <?php
+        foreach ($people as $value) {
+            echo "<td>$value</td>";
+        }
+        ?>
+    </tr>
+    </tbody>
+
+
+
+
+
+
+
+
+</table>
+
 
 </body>
 </html>
